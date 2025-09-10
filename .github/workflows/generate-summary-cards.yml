@@ -16,7 +16,7 @@ jobs:
       - name: Generate Profile Summary Cards
         uses: github-profile-summary-cards@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.Git_token }}
           username: HRyoussef
           theme: nord_dark
           output: profile-summary-card-output
