@@ -2,18 +2,19 @@ name: Generate Profile Summary Cards
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # Tous les dimanches
+    - cron: '0 0 * * 0' # Exécuter tous les dimanches
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Generate Profile Summary Cards
-        uses: vn7n24fzkq/github-profile-summary-cards@v1.0.2
+        uses: github-profile-summary-cards@v1
         with:
           github_token: ${{ secrets.Git_token }}
           username: HRyoussef
